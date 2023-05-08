@@ -20,7 +20,7 @@ theme: /
         a: Курс валют сегодня {{currency.rate}}
 
     state: NoMatch
-        intent!: /NoMatch
+        event!: NoMatch
         a: Я не понял. Вы сказали: {{$request.query}}
 
     state: Match
