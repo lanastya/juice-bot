@@ -7,15 +7,20 @@ theme: /
         a: Начнём.
 
     state: Hello
-        intent!: /привет
-        a: Привет привет
+        intent!: /hello
+        a: Привет, рад тебя видеть!
 
-    state: Bye
-        intent!: /пока
-        a: Пока пока
+    state: Weather
+        intent!: /weather
+        a: Погода сегодня {{weather.today}}
+            
+    
+    state: Currency
+        intent!: /currency
+        a: Курс валют сегодня {{currency.rate}}
 
     state: NoMatch
-        event!: noMatch
+        intent!: /NoMatch
         a: Я не понял. Вы сказали: {{$request.query}}
 
     state: Match
